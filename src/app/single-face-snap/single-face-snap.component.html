@@ -1,0 +1,13 @@
+<div class="face-snap-card" [ngClass]="{snapped: button === 'oops, unsnap' } ">
+    <h2>{{faceSnap.title | titlecase}}</h2>
+    <a routerLink="/facesnaps">Back</a>
+    <p>Mise en ligne à {{faceSnap.createdDate | date:'HH:mm, le d MMMM YYYY'}}</p> <!--ohatra afa azo atao 'dd/MM/yy,à HH:mm' or le d MMMM yyyy-->
+    <p>{{faceSnap.description}}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title"> 
+    <p>
+        <button (click)="onComportementSnap()">{{button}}</button> <!--//on utilise click et non onclick car on veut reagir a 'event' qui s'appelle click-->
+        <span [ngStyle]="{color: 'rgb(0, ' + faceSnap.snaps + ', 0)'}">  {{faceSnap.snaps}} </span>
+    </p>
+    <p *ngIf="faceSnap.location">Photo prise à {{faceSnap.location}}</p>
+    <!--<p>{{0.336 | currency:'EUR'}}</p> au moins un chiffres pour les entiers min 0 après max 0 chiffres-->
+    </div> 

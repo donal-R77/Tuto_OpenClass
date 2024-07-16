@@ -1,0 +1,11 @@
+<div class="face-snap-card" [ngClass]="{snapped: button === 'oops, un snap' } ">
+<h2>{{faceSnaps.title | titlecase}}</h2>
+<!--<p>Mise en ligne à {{faceSnap.createdDate | date:'HH:mm, le d MMMM YYYY'}}</p> ohatra afa azo atao 'dd/MM/yy,à HH:mm' or le d MMMM yyyy-->
+<p>{{faceSnaps.description}}</p> 
+<p>
+    <button (click)="onViewFaceSnap()">VIEW</button> <!--//on utilise click et non onclick car on veut reagir a 'event' qui s'appelle click-->
+    
+</p>
+<!--<p *ngIf="faceSnap.location">Photo prise à {{faceSnap.location}}</p>-->
+<!--<p>{{0.336 | currency:'EUR'}}</p> au moins un chiffres pour les entiers min 0 après max 0 chiffres-->
+</div> 
